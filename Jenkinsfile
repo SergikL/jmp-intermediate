@@ -12,7 +12,7 @@ pipeline {
                     sh 'ls -lah'
                 }
 
-				timeout(time: 6, unit: 'SECONDS') {
+				timeout(time: 1, unit: 'MINUTES') {
                     sh '/var/jenkins_home/scripts/fibonacci.sh 32'
                 }
             }
