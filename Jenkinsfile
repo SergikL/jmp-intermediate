@@ -6,9 +6,11 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "${params.buildTool} provided"
-				ls -lah
-				bash module-01/jenkins/script/run.sh -n "${params.buildTool}"
+                sh '''
+					echo "${params.buildTool} provided"
+                    ls -lah
+					bash module-01/jenkins/script/run.sh -n "${params.buildTool}"
+                '''
             }
         }
     }
