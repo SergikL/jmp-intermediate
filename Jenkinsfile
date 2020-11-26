@@ -12,8 +12,10 @@ pipeline {
                     sh 'ls -lah'
                 }
 
+				sh '#!/bin/bash'
+				sh 'echo "Who I'm $SHELL"'
 				timeout(time: 1, unit: 'MINUTES') {
-                    sh '/var/jenkins_home/workspace/release/module-01/jenkins/script/run.sh maven'
+                    sh '/var/jenkins_home/workspace/release/module-01/jenkins/script/run.sh -n "maven"'
                 }
             }
         }
