@@ -13,7 +13,7 @@ pipeline {
                 }
 
 				timeout(time: 1, unit: 'MINUTES') {
-                    sh '/home/jenkins/workspace/release/module-01/jenkins/script/run.sh maven'
+                    sh '/var/jenkins_home/workspace/release/module-01/jenkins/script/run.sh maven'
                 }
             }
         }
