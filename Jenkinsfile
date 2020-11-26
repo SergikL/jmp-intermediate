@@ -9,7 +9,7 @@ pipeline {
 				echo "${params.buildTool} provided"
 
 				timeout(time: 5, unit: 'SECONDS') {
-                    ls -lah
+                    sh 'ls -lah'
                 }
 
 				timeout(time: 6, unit: 'SECONDS') {
