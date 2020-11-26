@@ -24,7 +24,7 @@ Home Task
     1. - [X] For CI/CD you should use project from build tools home work
     1. - [X] Use names for job described in brackets (name: $nameOfJob)
     1. - [X] Create build job (name: *release*) - **0.5 points**
-       1. - [ ] Should build when SCM has changes
+       1. - [X] Should build when SCM has changes
        1. - [ ] Job should be parameterized with maven or grade (user should be able to choose it in job parameter)
        1. - [ ] Use promotion plugin. Should be available two promo stars
           1. - [ ] First stars should be applied automatically to successful build (QA)
