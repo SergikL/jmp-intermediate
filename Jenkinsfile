@@ -3,10 +3,11 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Hello World"'
+                sh 'echo "biuld has been initiated"'
+				sh 'echo "${params.buildTool}" provided'
                 sh '''
-                    echo "Multiline shell steps works too"
                     ls -lah
+					bash module-01/jenkins/script/run.sh -n "${params.buildTool}"
                 '''
             }
         }
