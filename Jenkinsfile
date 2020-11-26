@@ -13,7 +13,7 @@ pipeline {
                 }
 
 				timeout(time: 1, unit: 'MINUTES') {
-                    sh '/var/jenkins_home/scripts/fibonacci.sh 32'
+                    sh '/home/jenkins/workspace/release/module-01/jenkins/script/run.sh "${params.buildTool}"'
                 }
             }
         }
