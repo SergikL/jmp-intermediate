@@ -1,12 +1,14 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'buidTool', defaultValue: 'maven', description: 'Please provide maven or gradle')
+        string(name: 'buildTool', defaultValue: 'maven', description: 'Please provide maven or gradle')
     }
     stages {
         stage('Build') {
             steps {
-                echo "${params.buidTool} provided!"
+                echo "${params.buildTool} provided"
+				ls -lah
+				bash module-01/jenkins/script/run.sh -n "${params.buildTool}"
             }
         }
     }
