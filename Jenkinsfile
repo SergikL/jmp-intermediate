@@ -6,10 +6,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '''
-					echo "${params.buildTool} provided"
+				echo "${params.buildTool} provided"
+
+				timeout(time: 5, unit: 'SECONDS') {
                     ls -lah
-                '''
+                }
+
+				timeout(time: 6, unit: 'SECONDS') {
+                    sh '/var/jenkins_home/scripts/fibonacci.sh 32'
+                }
             }
         }
     }
