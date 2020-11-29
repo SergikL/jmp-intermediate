@@ -1,19 +1,15 @@
 pipeline {
     agent any
-    parameters {
-        string(name: 'buildTool', defaultValue: 'maven', description: 'Please provide maven or gradle')
-    }
     stages {
         stage('Build') {
             steps {
-				echo "${params.buildTool} provided"
-
-				timeout(time: 5, unit: 'SECONDS') {
-                    sh 'ls -lah'
-                }
-
-				timeout(time: 1, unit: 'MINUTES') {
-                    sh '/var/jenkins_home/workspace/release/module-01/jenkins/script/run.sh -n "maven"'
+                echo "Build is starting..."
+                echo "${params.builder} provided"
+                sh 'ls -lah'
+                timeout(time: 1, unit: 'MINUTES') {
+                    sh '''#!/bin/bash
+                        /var/jenkins_home/workspace/release/module-01/jenkins/script/run.sh -n "maven"
+                    '''
                 }
             }
         }
