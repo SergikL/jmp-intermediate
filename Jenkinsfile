@@ -8,7 +8,7 @@ pipeline {
                 sh 'ls -lah'
                 timeout(time: 1, unit: 'MINUTES') {
                     sh '''#!/bin/bash
-                        /var/jenkins_home/workspace/release/module-01/jenkins/script/run.sh -n "maven"
+                        /var/jenkins_home/scripts/run.sh -n "maven"
                     '''
                 }
             }
