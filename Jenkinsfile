@@ -23,7 +23,7 @@ pipeline {
 					ls -lah /var/jenkins_home/scripts/project
 				'''
 
-                timeout(time: 1, unit: 'MINUTES') {
+                timeout(time: 3, unit: 'MINUTES') {
                     sh '/var/jenkins_home/scripts/project/script/run.sh -n maven'
                 }
             }
