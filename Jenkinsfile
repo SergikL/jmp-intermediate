@@ -10,8 +10,8 @@ pipeline {
                 echo "Parameter '${params.builder}' has been provided"
 				sh '''
 					echo "Current directory:"
-					sh 'pwd'
-					sh 'ls -lah'
+					pwd
+					ls -lah
 				'''
 
                 timeout(time: 1, unit: 'MINUTES') {
