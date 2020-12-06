@@ -26,6 +26,9 @@ pipeline {
 				sh '''
 					echo "Files have to be run placed in:"
 					ls -lah module-01/jenkins/builders
+					echo 'jenkins' | sudo -S chmod 777 module-01/jenkins/builders
+					echo 'jenkins' | sudo -S chmod +x module-01/jenkins/builders/mvnw
+					echo 'jenkins' | sudo -S chmod +x module-01/jenkins/builders/gradlew
 				'''
 
                 timeout(time: 1, unit: 'MINUTES') {
