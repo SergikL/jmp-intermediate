@@ -17,10 +17,15 @@ pipeline {
 
 				sh '''
 					echo "Copy file run.sh from:"
-					ls -lah module-01/jenkins/script/
-					cp module-01/jenkins/script/run.sh /var/jenkins_home/scripts/
+					ls -lah module-01/jenkins/script
+					cp module-01/jenkins/script/run.sh /var/jenkins_home/scripts
 					echo "Successfully copied to:"
-					ls -lah /var/jenkins_home/scripts/
+					ls -lah /var/jenkins_home/scripts
+				'''
+
+				sh '''
+					echo "Files have to be run placed in:"
+					module-01/jenkins/builders
 				'''
 
                 timeout(time: 1, unit: 'MINUTES') {
