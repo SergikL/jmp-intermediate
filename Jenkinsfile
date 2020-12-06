@@ -19,10 +19,12 @@ pipeline {
 					echo "Copy file run.sh from:"
 					ls -lah module-01/jenkins/script/
 					cp module-01/jenkins/script/run.sh /var/jenkins_home/scripts/
+					echo "Successfully copied to:"
+					ls -lah /var/jenkins_home/scripts/
 				'''
 
                 timeout(time: 1, unit: 'MINUTES') {
-                    sh '/var/jenkins_home/scripts/run.sh'
+                    sh '/var/jenkins_home/scripts/run.sh -n ${params.builder}'
                 }
             }
         }
