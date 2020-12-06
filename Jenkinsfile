@@ -8,16 +8,21 @@ pipeline {
             steps {
                 echo "Build is starting..."
                 echo "Parameter '${params.builder}' has been provided"
+
 				sh '''
 					echo "Current directory:"
 					pwd
 					ls -lah
 				'''
 
+				sh '''
+					echo "Copy file run.sh from:"
+					ls -lah module-01/jenkins/script/
+					cp module-01/jenkins/script/run.sh /var/jenkins_home/scripts/
+				'''
+
                 timeout(time: 1, unit: 'MINUTES') {
-                    sh '''#!/bin/bash
-                        /var/jenkins_home/workspace/release/module-01/jenkins/script/run.sh -n "maven"
-                    '''
+                    sh '/var/jenkins_home/scripts/run.sh'
                 }
             }
         }
