@@ -25,7 +25,7 @@ pipeline {
 
 				sh '''
 					echo "Files have to be run placed in:"
-					module-01/jenkins/builders
+					ls -lah module-01/jenkins/builders
 				'''
 
                 timeout(time: 1, unit: 'MINUTES') {
