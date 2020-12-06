@@ -24,7 +24,7 @@ pipeline {
 				'''
 
                 timeout(time: 1, unit: 'MINUTES') {
-                    sh '/var/jenkins_home/scripts/run.sh -n ${params.builder}'
+                    sh '/var/jenkins_home/scripts/run.sh -n '${params.builder}''
                 }
             }
         }
