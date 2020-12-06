@@ -23,8 +23,10 @@ pipeline {
 					ls -lah /var/jenkins_home/scripts/project
 				'''
 
+				def BUILDER="${params.builder}"
+
                 timeout(time: 3, unit: 'MINUTES') {
-                    sh '''/var/jenkins_home/scripts/project/script/run.sh -n ${params.builder}'''
+                    sh """/var/jenkins_home/scripts/project/script/run.sh -n ${BUILDER}"""
                 }
             }
         }
