@@ -1,7 +1,7 @@
 pipeline {
     agent any
 	parameters {
-		choice(name: 'builder', choices: "maven\gradle", description: 'please choose your preferable build tool')
+		choice(name: 'builder', choices: "maven\ngradle", description: 'please choose your preferable build tool')
 	}
     stages {
         stage('Build') {
