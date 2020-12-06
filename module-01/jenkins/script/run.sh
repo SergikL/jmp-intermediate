@@ -27,7 +27,7 @@ fi
 # Begin script in case all parameters are correct
 echo "$builder"
 
-cd /var/jenkins_home/workspace/release/module-01/jenkins/builders
+cd ../builders
 
 shopt -s nocasematch
 tool1="maven"

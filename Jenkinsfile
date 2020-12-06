@@ -16,23 +16,15 @@ pipeline {
 				'''
 
 				sh '''
-					echo "Copy file run.sh from:"
-					ls -lah module-01/jenkins/script
-					cp module-01/jenkins/script/run.sh /var/jenkins_home/scripts
-					echo "Successfully copied to:"
-					ls -lah /var/jenkins_home/scripts
-				'''
-
-				sh '''
 					echo "Files have to be run placed in:"
 					ls -lah module-01/jenkins/builders
-					echo 'jenkins' | sudo -S chmod 777 module-01/jenkins/builders
-					echo 'jenkins' | sudo -S chmod +x module-01/jenkins/builders/mvnw
-					echo 'jenkins' | sudo -S chmod +x module-01/jenkins/builders/gradlew
+					cp  module-01/jenkins/. /var/jenkins_home/scripts/project
+					echo "Copied project to:"
+					ls -lah /var/jenkins_home/scripts/project
 				'''
 
                 timeout(time: 1, unit: 'MINUTES') {
-                    sh '/var/jenkins_home/scripts/run.sh -n maven'
+                    sh '/var/jenkins_home/scripts/project/script/run.sh -n maven'
                 }
             }
         }
