@@ -18,7 +18,7 @@ pipeline {
 				sh '''
 					echo "Files have to be run placed in:"
 					ls -lah module-01/jenkins/builders
-					cp  module-01/jenkins/. /var/jenkins_home/scripts/project
+					cp -r module-01/jenkins/. /var/jenkins_home/scripts/project
 					echo "Copied project to:"
 					ls -lah /var/jenkins_home/scripts/project
 				'''
