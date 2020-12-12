@@ -28,7 +28,7 @@ Home Task
        1. - [X] Job should be parameterized with maven or grade (user should be able to choose it in job parameter)
        1. - [X] Use promotion plugin. Should be available two promo stars
           1. - [X] First stars should be applied automatically to successful build (QA)
-          1. - [ ] Second stars should be applied manually (Prod)
+          1. - [X] Second stars should be applied manually (Prod)
     1. - [ ] Create continuous Job (name: *continuous*) - **0.5 points**
        1. - [ ] Should build every night at 2:00 AM
     1. - [ ] Create Deploy Job (name: deploy) - **0.5 points**
