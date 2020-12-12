@@ -29,8 +29,8 @@ Home Task
        1. - [X] Use promotion plugin. Should be available two promo stars
           1. - [X] First stars should be applied automatically to successful build (QA)
           1. - [X] Second stars should be applied manually (Prod)
-    1. - [ ] Create continuous Job (name: *continuous*) - **0.5 points**
-       1. - [ ] Should build every night at 2:00 AM
+    1. - [X] Create continuous Job (name: *continuous*) - **0.5 points**
+       1. - [X] Should build every night at 2:00 AM
     1. - [ ] Create Deploy Job (name: deploy) - **0.5 points**
        1. - [ ] Should be parameterized with artifacts prompted with QA star
        1. - [ ] Use Container Deploy plugin
