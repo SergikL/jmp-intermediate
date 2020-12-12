@@ -26,7 +26,7 @@ Home Task
     1. - [X] Create build job (name: *release*) - **0.5 points**
        1. - [X] Should build when SCM has changes
        1. - [X] Job should be parameterized with maven or grade (user should be able to choose it in job parameter)
-       1. - [ ] Use promotion plugin. Should be available two promo stars
+       1. - [X] Use promotion plugin. Should be available two promo stars
           1. - [ ] First stars should be applied automatically to successful build (QA)
           1. - [ ] Second stars should be applied manually (Prod)
     1. - [ ] Create continuous Job (name: *continuous*) - **0.5 points**
